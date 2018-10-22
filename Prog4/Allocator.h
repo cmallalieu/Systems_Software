@@ -17,11 +17,11 @@ Program #4
 struct Allocator_t
 {
 	void* memory;
-	size_t capacity;
+	size_t capacity; //capacity of memory
+	size_t memUsed; //memUsed in memory
 	struct Allocation_t** allocationList;
 	size_t allocationListSize;
 	size_t allocationListCapacity;
-	size_t memUsed;
 };
 
 //create and destroy

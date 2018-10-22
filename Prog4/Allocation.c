@@ -45,9 +45,9 @@ int doesOverlap(struct Allocation_t* this, size_t checkOffset, size_t checkAlloc
 	size_t thisOffset = getStart(this);
 	size_t thisEnd = getEnd(this);
 	size_t checkEnd = checkOffset + checkAllocationSize;
-	if (thisOffset >= checkOffset && thisOffset < checkEnd)
+	if (thisOffset >= checkOffset && thisOffset < checkEnd) //if statements to determine if offsets overlap eachother
 	{
-		return 1;
+		return 1; //return 1 if there is overlap
 	}
 	else if (thisEnd > checkOffset && thisEnd <= checkEnd)
 	{
@@ -55,10 +55,10 @@ int doesOverlap(struct Allocation_t* this, size_t checkOffset, size_t checkAlloc
 	} 
 	else if (thisOffset <= checkOffset && thisEnd >= checkEnd)
 	{
-		return 1;
+		return 1; 
 	}
 	else
 	{
-		return 0;
+		return 0; //return 0 if there is no overlap
 	}
 }
